@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody playerRigidbody;
-    public float speed = 8f;
+    public Rigidbody playerRigidbody;// 이동에 사용할 리지드바디 컴포넌트
+    public float speed = 8f;// 이동 속력
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetKey(KeyCode.UpArrow) == true)
@@ -36,5 +34,9 @@ public class PlayerController : MonoBehaviour
             playerRigidbody.AddForce(-speed, 0f, 0f);
         }
 
+    }
+    public void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
