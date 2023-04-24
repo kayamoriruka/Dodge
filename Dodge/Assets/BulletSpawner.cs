@@ -15,7 +15,9 @@ public class BulletSpawner : MonoBehaviour
     void Start()
     {
         timeAfterSpawn = 0f;
+
         spawnRate = Random.Range(spawnRateMin, spawnRateMax);
+
         target = FindObjectOfType<PlayerController>().transform;
     }
 
